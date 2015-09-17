@@ -1,0 +1,9 @@
+v0.3-3 - 02/01/2012:
+ - .First.Lib replaced by .onLoad, .Last.Lib by .onUnload
+
+v0.3-2 - 01/25/2012: 
+ - NAMESPACE added
+ - In the C code, functions printf and exit replaced by Rprintf and error, respectively.
+ - Minor cosmetic changes.
+
+04/29/2004: Initial version
