@@ -1,3 +1,7 @@
+v0.3-4 - 09/17/2015:
+ - Pierre L'Ecuyer added to Authors
+ - Fixed wrong "UNPROTECT"ing objects
+
 v0.3-3 - 02/01/2012:
  - .First.Lib replaced by .onLoad, .Last.Lib by .onUnload
 

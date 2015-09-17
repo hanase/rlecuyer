@@ -7,7 +7,7 @@ Authors@R: c(
 			email="hanas@uw.edu", role=c("aut", "cre")),
 	person("Tony", "Rossini", 
 			email="anthony.rossini@novartis.com", role="aut"),
-    person("Pierre", "L'Ecuyer", role = "cph", comment="Author of the underlying C code"))
+    person("Pierre", "L'Ecuyer", role = "cph", comment="author of the underlying C code"))
 Description: Provides an interface to the C implementation of the
         random number generator with multiple independent streams
         developed by L'Ecuyer et al (2002). The main purpose of this

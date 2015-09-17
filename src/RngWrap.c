@@ -314,16 +314,14 @@ SEXP r_get_current_stream()
   }
   REAL(dummy)[18] = (int) current_stream->Anti;
   REAL(dummy)[19] = (int) current_stream->IncPrec;
-  UNPROTECT(1);
 
   PROTECT(dummys = allocVector(STRSXP, 1));
   SET_STRING_ELT(dummys,0, mkChar(current_stream->name));
-  UNPROTECT(1);
 
   PROTECT(sexp_stream = allocVector(VECSXP, 2));
   SET_VECTOR_ELT(sexp_stream,0,dummy);
   SET_VECTOR_ELT(sexp_stream,1, dummys);
-  UNPROTECT(1);
+  UNPROTECT(3);
   return sexp_stream;
 }
 
