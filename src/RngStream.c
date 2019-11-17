@@ -344,7 +344,7 @@ RngStream RngStream_CreateStream (const char name[])
       */
    }
    g->name = (char *) malloc ((len + 1) * sizeof (char));
-   strncpy (g->name, name, len + 1); 
+   strcpy (g->name, name); 
    g->Anti = 0;
    g->IncPrec = 0;
 
