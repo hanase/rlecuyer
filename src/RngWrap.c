@@ -9,7 +9,7 @@
 static RngStream current_stream;
 static double rn = 0.0;
 
-void r_create_current_stream()
+SEXP r_create_current_stream()
 {
  current_stream = (RngStream) malloc (sizeof (struct RngStream_InfoState));
 
@@ -17,15 +17,15 @@ void r_create_current_stream()
     error("r_create_current_stream: No more memory\n\n");
   }
  current_stream->name="";
-  return;
+ return R_NilValue;
 }
 
-void r_remove_current_stream()
+SEXP r_remove_current_stream()
 {
   free(current_stream);
   /*    RngStream_DeleteStream(&current_stream);*/
 
-  return;
+  return R_NilValue;
 }
 
 SEXP r_create_stream (SEXP sexp_name)
@@ -52,7 +52,7 @@ SEXP r_create_stream (SEXP sexp_name)
   return(sexp_newstream);
 }
 
-void r_set_package_seed(SEXP sexp_seed)
+SEXP r_set_package_seed(SEXP sexp_seed)
 {
   int i;
   unsigned long seed[6];
@@ -61,7 +61,7 @@ void r_set_package_seed(SEXP sexp_seed)
     seed[i]= (unsigned long) REAL(sexp_seed)[i];
   }
   RngStream_SetPackageSeed( (unsigned long *) seed);
-  return;
+  return R_NilValue;
 }
 
 
@@ -271,7 +271,7 @@ SEXP r_advance_state (SEXP sexp_e, SEXP sexp_c,
   return sexp_stream;
 }
 
-void r_set_current_stream (SEXP sexp_streamCg,SEXP sexp_streamBg,
+SEXP r_set_current_stream (SEXP sexp_streamCg,SEXP sexp_streamBg,
 		       SEXP sexp_streamIg,
 		       SEXP sexp_streamAnti,SEXP sexp_streamIncPrec,
 		       SEXP sexp_streamName)
@@ -298,7 +298,7 @@ void r_set_current_stream (SEXP sexp_streamCg,SEXP sexp_streamBg,
   }
   strncpy(current_stream->name, name, len+1);
 
-  return;
+  return R_NilValue;
 }
 
 SEXP r_get_current_stream()

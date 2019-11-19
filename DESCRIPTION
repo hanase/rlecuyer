@@ -1,5 +1,5 @@
 Package: rlecuyer
-Version: 0.3-4
+Version: 0.3-4.1
 Date: 2015-09-17
 Title: R Interface to RNG with Multiple Streams
 Authors@R: c(
@@ -15,3 +15,11 @@ Description: Provides an interface to the C implementation of the
         parallel R applications.
 License: GPL (>= 2)
 URL: http://www.iro.umontreal.ca/~lecuyer/myftp/papers/streams00.pdf
+NeedsCompilation: yes
+Packaged: 2019-11-17 08:49:04 UTC; hornik
+Author: Hana Sevcikova [aut, cre],
+  Tony Rossini [aut],
+  Pierre L'Ecuyer [cph] (author of the underlying C code)
+Maintainer: Hana Sevcikova <hanas@uw.edu>
+Repository: CRAN
+Date/Publication: 2019-11-17 09:04:46 UTC
