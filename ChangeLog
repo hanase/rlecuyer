@@ -1,3 +1,9 @@
+v0.3-5 - 11/19/2019:
+ - Wei-Chen Chen fixed a NOTE regarding registering dynamic C calls.
+
+v0.3-4.1 - 11/17/2019:
+ - Changes made by Kurt Hornik (fixes return values for functions called by .Call)
+ 
 v0.3-4 - 09/17/2015:
  - Pierre L'Ecuyer added to Authors
  - Fixed wrong "UNPROTECT"ing objects
