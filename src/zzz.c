@@ -8,13 +8,13 @@ SEXP r_advance_state (SEXP sexp_e, SEXP sexp_c,
                       SEXP sexp_streamIg,
                       SEXP sexp_streamAnti,SEXP sexp_streamIncPrec,
                       SEXP sexp_streamName);
-SEXP r_create_current_stream ();
+SEXP r_create_current_stream (void);
 SEXP r_create_stream (SEXP sexp_name);
-SEXP r_get_current_stream();
+SEXP r_get_current_stream(void);
 SEXP r_randU01 (SEXP sexp_streamCg,SEXP sexp_streamBg,SEXP sexp_streamIg,
                 SEXP sexp_streamAnti,SEXP sexp_streamIncPrec,
                 SEXP sexp_streamName);
-SEXP r_remove_current_stream ();
+SEXP r_remove_current_stream (void);
 SEXP r_reset_next_substream (SEXP sexp_streamCg,SEXP sexp_streamBg,
                              SEXP sexp_streamIg,
                              SEXP sexp_streamAnti,SEXP sexp_streamIncPrec,

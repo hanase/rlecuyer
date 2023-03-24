@@ -298,8 +298,7 @@
   return(old.kind)
 }
 
-.lec.CurrentStreamEnd <- function(kind.old = c("Marsaglia-Multicarry",
-                                     "Kinderman-Ramage")) {
+.lec.CurrentStreamEnd <- function(kind.old = c("Mersenne-Twister", "Kinderman-Ramage")) {
    stream <- .Call("r_get_current_stream",PACKAGE="rlecuyer" )
 
 

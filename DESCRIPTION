@@ -1,6 +1,6 @@
 Package: rlecuyer
-Version: 0.3-5
-Date: 2019-11-19
+Version: 0.3-7
+Date: 2023-03-23
 Title: R Interface to RNG with Multiple Streams
 Authors@R: c(
 	person("Hana", "Sevcikova", 

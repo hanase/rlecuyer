@@ -18,4 +18,5 @@
     naming the streams.}
 }
 \value{None}
+\seealso{\code{\link[=.lec.SetPackageSeed]{SetPackageSeed}} for description of a state of a stream and examples}
 \keyword{distribution}

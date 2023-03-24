@@ -9,7 +9,7 @@
 static RngStream current_stream;
 static double rn = 0.0;
 
-SEXP r_create_current_stream()
+SEXP r_create_current_stream(void)
 {
  current_stream = (RngStream) malloc (sizeof (struct RngStream_InfoState));
 
@@ -20,7 +20,7 @@ SEXP r_create_current_stream()
  return R_NilValue;
 }
 
-SEXP r_remove_current_stream()
+SEXP r_remove_current_stream(void)
 {
   free(current_stream);
   /*    RngStream_DeleteStream(&current_stream);*/
@@ -301,7 +301,7 @@ SEXP r_set_current_stream (SEXP sexp_streamCg,SEXP sexp_streamBg,
   return R_NilValue;
 }
 
-SEXP r_get_current_stream()
+SEXP r_get_current_stream(void)
 {
   SEXP sexp_stream,dummy,dummys;
   int i;
@@ -325,7 +325,7 @@ SEXP r_get_current_stream()
   return sexp_stream;
 }
 
-double *user_unif_rand ()
+double *user_unif_rand (void)
 {
   if (!current_stream) {
     Rprintf("No stream created yet!");

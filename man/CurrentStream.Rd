@@ -7,7 +7,7 @@
   \code{\link{runif}} or \code{\link{rnorm}}. \code{.lec.CurrentStreamEnd unsets it.}}
 \usage{
 .lec.CurrentStream (name)
-.lec.CurrentStreamEnd (kind.old = c("Marsaglia-Multicarry",
+.lec.CurrentStreamEnd (kind.old = c("Mersenne-Twister",
                          "Kinderman-Ramage"))
 }
 \arguments{
@@ -30,10 +30,10 @@ nstreams <- 10       # number of streams
 names <- paste("mystream",1:nstreams,sep="")
 .lec.CreateStream(names)
 for (i in 1:nstreams) {  # generate 10 RNs from each stream
-   .lec.CurrentStream(names[i])
+   old.kind <- .lec.CurrentStream(names[i])
    print(paste("stream no.",i))
    print(runif(10))
-   .lec.CurrentStreamEnd()
+   .lec.CurrentStreamEnd(old.kind)
 }
 }
 \keyword{distribution}
